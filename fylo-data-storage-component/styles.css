@@ -1,0 +1,119 @@
+:root {
+    --pale-blue:hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: Raleway;
+    background-color:hsl(229, 57%, 11%) ;
+  }
+
+.container {
+    background-image: url("./images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 250px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 20px 50% 20px 20px;
+    padding: 40px;
+    gap: 30px;
+}
+
+.card-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.card-bottom>img {
+    background-color: var(--very-dark-blue);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.progress-bar {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.progress-bar-info {
+    color:hsl(229, 7%, 55%);
+}
+
+.progress-bar-progress {
+    display: flex;
+    height: 14px;
+    width: 450px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+}
+  
+.progress-bar-process {
+    height: 14px;
+    width: 300px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+}
+  
+.progress-bar-steps {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.progress-bar-steps>span {
+    color:hsl(243, 100%, 93%);
+}
+
+strong {
+    color:hsl(243, 100%, 93%);
+}
+
+.pale-blue {
+    background-color: hsl(243, 100%, 93%);
+}
+
+.grayish-blue {
+    background-color: hsl(229, 7%, 55%);
+}
+
+.dark-blue {
+    background-color: hsl(228, 56%, 26%);
+}
+
+.very-dark-blue {
+    background-color: hsl(229, 57%, 11%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
