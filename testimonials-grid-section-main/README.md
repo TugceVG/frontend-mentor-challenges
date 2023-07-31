@@ -46,8 +46,8 @@ Users should be able to:
 I would like to recap over some of my learning while through this project. 
 
 - How to use CSS grid to arrange related elements on my page.
-- Using structural pseudo-class selector in CSS file. 
-- What the markdown is and how to use use markdown file effectively.
+- Using structural pseudo-class selector in CSS. 
+- What the markdown is and how to use markdown file effectively.
 
 ```css
 .grid-container {
