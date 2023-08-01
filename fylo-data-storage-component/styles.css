@@ -15,26 +15,34 @@ body {
     font-size: 14px;
     font-family: Raleway;
     background-color:hsl(229, 57%, 11%) ;
-  }
+}
 
 .container {
     background-image: url("./images/bg-desktop.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 100vh;
+    background-size: contain;
     display: flex;
+    height: 100vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.card-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 250px;
-    background-color: hsl(228, 56%, 26%);
-    border-radius: 20px 50% 20px 20px;
-    padding: 40px;
+    width: 300px;
+    height: 175px;
+    background-color: var(--dark-blue);
+    border-radius: 8px 70px 8px 8px;
+    padding: 30px;
     gap: 30px;
 }
 
@@ -49,34 +57,85 @@ body {
     border-radius: 8px;
 }
 
-.progress-bar {
-    height: 200px;
-    width: 500px;
+.progress-bar-card {
     display: flex;
     flex-direction: column;
+    min-width: 500px;
+    background-color: var(--dark-blue);
     border-radius: 10px;
     padding: 20px;
     gap: 10px;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0px 5px;
+    gap: 5px;
+}
+
+/* .tooltip .tooltip-text {
+    position: absolute;
+    background-color: #fff;
+    width: 110px;
+    height: 45px;
+    top: -40px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0px 5px;
+    gap: 5px;
+} */
+
+h2, h6 {
+    display: inline-block
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    border-left: 16px solid transparent;
+    border-top: 16px solid #fff;
+} 
+
+.progress-bar {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
 }
 
 .progress-bar-info {
     color:hsl(229, 7%, 55%);
 }
-
-.progress-bar-progress {
-    display: flex;
-    height: 14px;
-    width: 450px;
-    background-color: hsl(229, 57%, 11%);
-    border-radius: 10px;
-}
   
 .progress-bar-process {
-    height: 14px;
-    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10px;
+    width: 80%;
     background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     border-radius: 10px;
+}
+
+.progress-bar-process-ball {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--pale-blue);
+    margin-right: 1px;
 }
   
 .progress-bar-steps {
@@ -89,16 +148,39 @@ body {
     color:hsl(243, 100%, 93%);
 }
 
-strong {
-    color:hsl(243, 100%, 93%);
+@media(max-width: 768px) {
+    .container {
+        background-image: url("./images/bg-mobile.png");
+        background-size: cover;
+    }
+
+    .card-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-bar-card {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .tooltip {
+        top: 75%;
+        right: 35%;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .tooltip::after {
+        visibility: hidden;
+    } 
 }
 
 .pale-blue {
-    background-color: hsl(243, 100%, 93%);
+    color: hsl(243, 100%, 93%);
 }
 
 .grayish-blue {
-    background-color: hsl(229, 7%, 55%);
+    color: hsl(229, 7%, 55%);
 }
 
 .dark-blue {
@@ -106,12 +188,17 @@ strong {
 }
 
 .very-dark-blue {
-    background-color: hsl(229, 57%, 11%);
+    color: hsl(229, 57%, 11%);
 }
 
 .attribution {
-    font-size: 11px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
+    font-size: 11px;
+    padding: 10px;
 }
 
 .attribution a {

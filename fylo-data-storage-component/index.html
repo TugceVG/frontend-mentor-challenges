@@ -30,25 +30,32 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
-      <div class="card-top">
-        <img src="./images/logo.svg" alt="" />
-      </div>
-      <div class="card-bottom">
-        <img src="./images/icon-document.svg" alt="" />
-        <img src="./images/icon-folder.svg" alt="" />
-        <img src="./images/icon-upload.svg" alt="" />
-      </div>
-    </div>
-    <div class="process-bar-card">
-      <div class="progress-bar dark-blue">
-        <div class="progress-bar-info">
-          <span>You’ve used <strong>815 GB</strong> of your storage</span>
+  <main class="container">
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-top">
+          <img src="./images/logo.svg" alt="" />
         </div>
-        <div class="progress-bar-progress">
-          <div class="progress-bar-process"></div>
-          <div class="progress-bar-process-ball"></div>
+        <div class="card-bottom">
+          <img src="./images/icon-document.svg" alt="" />
+          <img src="./images/icon-folder.svg" alt="" />
+          <img src="./images/icon-upload.svg" alt="" />
+        </div>
+      </div>
+      <div class="progress-bar-card">
+        <div class="tooltip">
+          <span>
+            <h2>185</h2>
+            <h6 class="grayish-blue">GB Left</h6>
+          </span>
+        </div>
+        <div class="progress-bar-info">
+          <span>You’ve used <strong class="pale-blue">815 GB</strong> of your storage</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar-process">
+            <div class="progress-bar-process-ball"></div>
+          </div>
         </div>
         <div class="progress-bar-steps">
           <span>0 GB</span>
@@ -56,13 +63,11 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- 185 GB Left -->
-  </div>
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Tugce Vatansever Gunduz</a>.
-  </footer>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Tugce Vatansever Gunduz</a>.
+    </footer>
+  </main>
 </body>
 
 </html>
