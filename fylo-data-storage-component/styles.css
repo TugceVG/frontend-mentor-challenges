@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 :root {
     --pale-blue:hsl(243, 100%, 93%);
     --grayish-blue: hsl(229, 7%, 55%);
     --dark-blue: hsl(228, 56%, 26%);
     --very-dark-blue: hsl(229, 57%, 11%);
+    --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    --footer-height: 80px;
 }
 
 * {
@@ -13,126 +16,139 @@
 
 body {
     font-size: 14px;
-    font-family: Raleway;
-    background-color:hsl(229, 57%, 11%) ;
+    font-family: 'Raleway', sans-serif;
+    background: black;
 }
 
 .container {
-    background-image: url("./images/bg-desktop.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
     display: flex;
-    height: 100vh;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 1440px;
+    height: 800px;
+    margin: auto;
+    background: var(--very-dark-blue);
 }
 
 .card-wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
     align-items: flex-end;
-    gap: 20px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 175px;
+    justify-content: center;
+    min-width: 350px;
+    height: 200px;
     background-color: var(--dark-blue);
-    border-radius: 8px 70px 8px 8px;
-    padding: 30px;
+    border-radius: 10px 100px 10px 10px;
+    padding: 35px;
     gap: 30px;
 }
 
 .card-bottom {
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 
 .card-bottom>img {
     background-color: var(--very-dark-blue);
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
 }
 
 .progress-bar-card {
     display: flex;
     flex-direction: column;
-    min-width: 500px;
+    justify-content: center;
+    min-width: 540px;
+    height: 155px;
     background-color: var(--dark-blue);
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 35px;
     gap: 10px;
     position: relative;
 }
 
 .tooltip {
     position: absolute;
-    top: -40px;
-    right: 20px;
+    top: -50px;
+    right: 40px;
     background-color: #fff;
+    width: 179px;
+    height: 75px;
     padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    border-radius: 5px 5px 0px 5px;
-    gap: 5px;
+    border-radius: 10px 10px 0px 10px;
 }
 
-/* .tooltip .tooltip-text {
-    position: absolute;
-    background-color: #fff;
-    width: 110px;
-    height: 45px;
-    top: -40px;
-    right: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px 5px 0px 5px;
-    gap: 5px;
-} */
+h2 {
+    font-size: 2.5rem;
+}
 
-h2, h6 {
-    display: inline-block
+h6 {
+    font-size: .8rem;
+    color: var(--grayish-blue);
+    text-transform: uppercase;
 }
 
 .tooltip::after {
     content: "";
     position: absolute;
-    bottom: -15px;
+    bottom: -20px;
     right: 0;
-    border-left: 16px solid transparent;
-    border-top: 16px solid #fff;
+    border-left: 20px solid transparent;
+    border-top: 20px solid #fff;
 } 
 
 .progress-bar {
     display: flex;
     width: 100%;
-    height: 10px;
-    background-color: hsl(229, 57%, 11%);
+    height: 14px;
+    background-color: var(--very-dark-blue);
     border-radius: 10px;
 }
 
 .progress-bar-info {
-    color:hsl(229, 7%, 55%);
+    color: var(--pale-blue);
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.progress-bar-info span .bold{
+    font-weight: 700;
 }
   
 .progress-bar-process {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 10px;
-    width: 80%;
-    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 14px;
+    width: 70%;
+    background: var(--gradient);
     border-radius: 10px;
 }
 
 .progress-bar-process-ball {
-    height: 8px;
-    width: 8px;
+    height: 11px;
+    width: 11px;
     border-radius: 50%;
     background-color: var(--pale-blue);
     margin-right: 1px;
@@ -142,19 +158,34 @@ h2, h6 {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    color: var(--pale-blue);
 }
 
-.progress-bar-steps>span {
-    color:hsl(243, 100%, 93%);
+.attribution {
+    text-align: center;
+    font-size: 12px;
+    color: var(--grayish-blue);
+    height: var(--footer-height);
+}
+
+.attribution a {
+    color: var(--grayish-blue);
+    font-weight: 700;
 }
 
 @media(max-width: 768px) {
     .container {
+        width: 100%;
+        height: calc(100vh - var(--footer-height));
+        margin: 0;
+    }
+
+    .card-wrapper {
         background-image: url("./images/bg-mobile.png");
         background-size: cover;
     }
 
-    .card-wrapper {
+    .card-container{
         flex-direction: column;
         align-items: center;
     }
@@ -165,42 +196,12 @@ h2, h6 {
     }
 
     .tooltip {
-        top: 75%;
-        right: 35%;
-        border-radius: 5px 5px 5px 5px;
+        top: 85%;
+        right: 27%;
+        border-radius: 10px 10px 10px 10px;
     }
 
     .tooltip::after {
         visibility: hidden;
     } 
-}
-
-.pale-blue {
-    color: hsl(243, 100%, 93%);
-}
-
-.grayish-blue {
-    color: hsl(229, 7%, 55%);
-}
-
-.dark-blue {
-    background-color: hsl(228, 56%, 26%);
-}
-
-.very-dark-blue {
-    color: hsl(229, 57%, 11%);
-}
-
-.attribution {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 11px;
-    padding: 10px;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }

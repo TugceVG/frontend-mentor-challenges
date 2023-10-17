@@ -5,69 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Raleway:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,500&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-
   <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
-  <main class="container">
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-top">
-          <img src="./images/logo.svg" alt="" />
-        </div>
-        <div class="card-bottom">
-          <img src="./images/icon-document.svg" alt="" />
-          <img src="./images/icon-folder.svg" alt="" />
-          <img src="./images/icon-upload.svg" alt="" />
-        </div>
-      </div>
-      <div class="progress-bar-card">
-        <div class="tooltip">
-          <span>
-            <h2>185</h2>
-            <h6 class="grayish-blue">GB Left</h6>
-          </span>
-        </div>
-        <div class="progress-bar-info">
-          <span>You’ve used <strong class="pale-blue">815 GB</strong> of your storage</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-bar-process">
-            <div class="progress-bar-process-ball"></div>
+  <div class="container">
+    <main class="card-wrapper">
+      <div class="card-container">
+        <div class="card">
+          <div class="card-top">
+            <img src="./images/logo.svg" alt="" />
+          </div>
+          <div class="card-bottom">
+            <img src="./images/icon-document.svg" alt="" />
+            <img src="./images/icon-folder.svg" alt="" />
+            <img src="./images/icon-upload.svg" alt="" />
           </div>
         </div>
-        <div class="progress-bar-steps">
-          <span>0 GB</span>
-          <span>1000 GB</span>
+        <div class="progress-bar-card">
+          <div class="tooltip">
+            <h2>185</h2>
+            <h6>GB Left</h6>
+          </div>
+          <div class="progress-bar-info">
+            <span>You’ve used <span class="bold">815 GB</span> of your storage</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-process">
+              <div class="progress-bar-process-ball"></div>
+            </div>
+          </div>
+          <div class="progress-bar-steps">
+            <span>0 GB</span>
+            <span>1000 GB</span>
+          </div>
         </div>
       </div>
-    </div>
-    <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Tugce Vatansever Gunduz</a>.
-    </footer>
-  </main>
+    </main>
+  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Tugce Vatansever Gunduz</a>.
+  </footer>
 </body>
 
 </html>
