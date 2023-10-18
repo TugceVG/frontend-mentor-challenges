@@ -173,6 +173,30 @@ h6 {
     font-weight: 700;
 }
 
+@media(max-width: 1200px) {
+    .container {
+        width: 100%;
+        height: calc(100vh - var(--footer-height));
+        margin: 0;
+    }
+
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tooltip {
+        top: 85%;
+        right: 35%;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .tooltip::after {
+        visibility: hidden;
+    } 
+}
+
 @media(max-width: 768px) {
     .container {
         width: 100%;
