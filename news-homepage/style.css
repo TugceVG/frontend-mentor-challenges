@@ -40,20 +40,35 @@ nav {
     margin-top: 70px;
 }
 
-nav ul {
+nav .navbar .nav-links {
     display: flex;
     gap: 30px;
     list-style: none;
 
 }
 
-nav ul li a {
+nav .navbar .nav-links li a {
     text-decoration: none;
     color: var(--dark-grayish-blue);
 }
 
-nav ul li a:hover {
+nav .navbar .nav-links li a:hover {
     color: var(--soft-red);
+}
+
+nav .toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    height: 35px;
+}
+
+nav .toggle-button .icon-bar {
+    height: 4px;
+    width: 100%;
+    background: var(--very-dark-blue);
+    border-radius: 5px;
 }
 /* NAV End */
 
@@ -64,7 +79,7 @@ main {
     display: flex;
     gap: 30px;
     margin-top: 50px;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 
 main section {
@@ -81,6 +96,8 @@ main section img {
 main section .content {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 main section .content .content-left {
@@ -90,7 +107,8 @@ main section .content .content-left {
 
 main section .content .content-left h1 {
     font-size: 3.8rem;
-    font-weight: 900;
+    font-weight: 800;
+    margin: 0 0 10px;
 }
 
 main section .content .content-right {
@@ -110,7 +128,7 @@ main section .content .content-right a{
     max-width: 180px;
     text-align: center;
     padding: 10px;
-    background: var(--very-dark-blue);
+    background: var(--soft-red);
     color: var(--off-white);
     text-decoration: none;
     text-transform: uppercase;
@@ -118,7 +136,7 @@ main section .content .content-right a{
 }
 
 main section .content .content-right a:hover {
-    background: var(--soft-red);
+    background: var(--very-dark-blue);
 }
 
 main aside {
@@ -130,7 +148,6 @@ main aside {
 }
 
 aside h1 {
-    /* margin-bottom: 30px; */
     color: var(--soft-orange);
     font-size: 2.5rem;
     font-weight: 700;
@@ -142,7 +159,6 @@ aside h1 {
 aside .aside-card {
     margin: 20px;
     padding-bottom: 30px;
-    /* margin-bottom: 20px; */
     border-bottom: 1px solid var(--grayish-blue);
 }
 
@@ -159,45 +175,56 @@ aside .aside-card h2 {
     margin-bottom: 10px;
 }
 
-aside .aside-card p {
-    color: var(--dark-grayish-blue);
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    font-weight: 400;
+aside .aside-card h2:hover {
+    color: var(--soft-orange);
 }
 
+aside .aside-card p {
+    color: var(--grayish-blue);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
 /* MAIN end */
 
-.card {
+.card-container {
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 70px;
     width: 100%;
 }
 
-.card-item {
+.card {
+    flex: 1;
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
-.card-item .card-item-left img {
-    height: 130px;
+.card .card-left img {
+    max-height: 130px;
     width: 100px;
 }
 
-.card-item .card-item-right {
+.card .card-right {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.card-item .card-item-right h1 {
+.card .card-right h1 {
     color: var(--grayish-blue);
 }
 
-.card-item .card-item-right p {
+.card .card-right h2 {
+    color: var(--very-dark-blue);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.card .card-right p {
     line-height: 1.6;
     color: var(--dark-grayish-blue);
+    padding-right: 15px;
 }
 
 /* FOOTER */
@@ -210,3 +237,50 @@ aside .aside-card p {
     color: hsl(228, 45%, 44%);
   }
 /* FOOTER End */
+
+@media screen and (max-width:768px) {
+    nav {
+        margin-top: 20px;
+    }
+
+    nav .toggle-button {
+        display: flex;
+        padding: 0 10px 0 0;
+        z-index: 1;
+    }
+
+    nav .navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        padding-top: 150px;
+        background: var(--off-white);
+        width: 0px;
+        overflow: hidden;
+        transition: width 0.5s ease;
+    }
+
+    nav .navbar.active {
+        width: 250px;
+        border-left: 1px solid #eee;
+    }
+
+    nav .navbar .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav .navbar .nav-links li {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 0 0 10px;
+        white-space: nowrap;
+    }
+
+    nav .navbar .nav-links li a {
+        padding: 10px 20px;
+    }
+}
