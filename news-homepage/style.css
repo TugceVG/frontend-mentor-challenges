@@ -42,7 +42,7 @@ nav {
 
 nav .navbar .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     list-style: none;
 
 }
@@ -65,10 +65,12 @@ nav .toggle-button {
 }
 
 nav .toggle-button .icon-bar {
-    height: 4px;
+    height: 3px;
     width: 100%;
     background: var(--very-dark-blue);
     border-radius: 5px;
+    transform-origin: right;
+    transition: all 1s ease;
 }
 /* NAV End */
 
@@ -86,7 +88,8 @@ main section {
     flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 30px;
+    /* justify-content: space-between; */
 }
 
 main section img {
@@ -229,8 +232,11 @@ aside .aside-card p {
 
 /* FOOTER */
 .attribution {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
     font-size: 11px;
-    text-align: center;
   }
 
   .attribution a {
@@ -259,7 +265,7 @@ aside .aside-card p {
         background: var(--off-white);
         width: 0px;
         overflow: hidden;
-        transition: width 0.5s ease;
+        transition: all 1s ease;
     }
 
     nav .navbar.active {
@@ -269,7 +275,7 @@ aside .aside-card p {
 
     nav .navbar .nav-links {
         flex-direction: column;
-        align-items: flex-end;
+        gap: 10px;
     }
 
     nav .navbar .nav-links li {
@@ -282,5 +288,21 @@ aside .aside-card p {
 
     nav .navbar .nav-links li a {
         padding: 10px 20px;
+        font-size: 20px;
     }
+
+    nav .toggle-button.opened .icon-bar:first-child {
+        transform: rotate(-50deg);
+    }
+    nav .toggle-button.opened .icon-bar:nth-child(2) {
+            opacity: 0;
+    }
+    nav .toggle-button.opened .icon-bar:last-child {
+            transform: rotate(50deg);
+    }
+
+    /* .container.dark {
+        background: var(--grayish-blue);
+        opacity: 0.3;
+    } */
 }
