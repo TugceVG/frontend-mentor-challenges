@@ -25,7 +25,7 @@ body {
 }
 /* BASE End */
 
-.container{
+.container {
     max-width: 1100px;
     margin: 0 auto;
     color: var(--very-dark-blue);
@@ -58,20 +58,29 @@ nav .navbar .nav-links li a:hover {
 
 nav .toggle-button {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    align-items: center;
     width: 50px;
     height: 35px;
 }
 
-nav .toggle-button .icon-bar {
+nav .toggle-button svg:first-child {
+    display: flex;
+}
+
+nav .toggle-button svg:last-child {
+    display: none;
+}
+
+/* nav .toggle-button .icon-bar {
     height: 3px;
     width: 100%;
     background: var(--very-dark-blue);
     border-radius: 5px;
     transform-origin: right;
     transition: all 1s ease;
-}
+} */
 /* NAV End */
 
 /* MAIN */
@@ -291,18 +300,26 @@ aside .aside-card p {
         font-size: 20px;
     }
 
-    nav .toggle-button.opened .icon-bar:first-child {
+    nav .toggle-button.opened svg:first-child {
+        display: none;
+    }
+
+    nav .toggle-button.opened svg:last-child {
+        display: flex;
+    }
+
+    /* nav .toggle-button.opened .icon-bar:first-child {
         transform: rotate(-50deg);
     }
     nav .toggle-button.opened .icon-bar:nth-child(2) {
-            opacity: 0;
+        opacity: 0;
     }
     nav .toggle-button.opened .icon-bar:last-child {
-            transform: rotate(50deg);
-    }
-
-    /* .container.dark {
-        background: var(--grayish-blue);
-        opacity: 0.3;
+        transform: rotate(50deg);
     } */
+
+    .container.dark{
+        /* background: var(--grayish-blue); */
+        background: rgba(var(--grayish-blue), 0.25);
+    }
 }
