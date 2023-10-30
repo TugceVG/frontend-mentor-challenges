@@ -9,4 +9,9 @@ function toggleSideMenu() {
 }
 
 toggleButton.addEventListener('click', toggleSideMenu);
-sidebarBackdrop.addEventListener('click', toggleSideMenu);
+
+sidebarBackdrop.addEventListener('click', () => {
+    if (window.innerWidth < 768) {
+        toggleSideMenu();
+    }
+});
