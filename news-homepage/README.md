@@ -1,6 +1,6 @@
 # Frontend Mentor - News homepage solution
 
-This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -15,7 +15,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-
 ## Overview
 
 ### The challenge
@@ -24,17 +23,14 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
-
 ### Screenshot
 
 ![This is my solution.](./screenshot-news-homepage.png)
-
 
 ### Links
 
 - Solution URL: [My solution URL here](https://github.com/TugceVG/frontend-mentor-challenges/tree/main/news-homepage)
 - Live Site URL: [Live site URL here](https://news-homepage-tugcevg.netlify.app/)
-
 
 ## My process
 
@@ -44,7 +40,6 @@ Users should be able to:
 - CSS custom properties
 - CSS flex
 - Mobile-first workflow
-
 
 ### What I learned
 
@@ -56,20 +51,17 @@ I would like to recap some of the key learnings from this project, which include
 - Implementing media queries for responsive design in the project.
 - Using javascript to add some functionality to the nav menu to cover it with hamburger menu feature.
 
-
 ### Continued development
 
 Recently, I have been studying HTML, CSS, JavaScript, and ReactJS. I am currently taking a ReactJS course on Udemy. Generally, ReactJS courses assume some prior knowledge of HTML and CSS. Therefore, I have been refreshing my knowledge of them and learning new features. I believe that applying this new knowledge in creating projects will help me grasp new features more easily. So, I think it's a brilliant idea to tackle new challenges on Frontend Mentor. My plan is to solve and share one challenge per week.
 
-Next challenge will be Results summary component.
-
+Next challenge will be [Results summary component](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV/hub).
 
 ## Author
 
 - Website - [Tugce Vatansever Gunduz](https://tugcevatansevergunduz.com/)
 - Frontend Mentor - [@TugceVG](https://www.frontendmentor.io/profile/TugceVG)
 - Github - [Tugce Vatansever Gunduz](https://github.com/TugceVG)
-
 
 ## Acknowledgments
 
