@@ -8,30 +8,41 @@
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
+  <div class="container">
+    <div class="result-container">
+      <span class="result-title">Your Result</span>
+      <div class="result-score">
+        <span class="score">76</span>
+        <span class="total">of 100</span>
+      </div>
+      <div class="result-description">
+        <span>Great</span>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+    </div>
+    <div class="summary-container">
+      <span class="summary-title">Summary</span>
+      <div class="summary-detail">
+        <div class="summary-detail-title">Reaction</div>
+        <div class="summary-detail-score">80 / 100</div>
+      </div>
+      <div class="summary-detail">
+        <div class="summary-detail-title">Memory</div>
+        <div class="summary-detail-score">92 / 100</div>
+      </div>
+      <div class="summary-detail">
+        <div class="summary-detail-title">Verbal</div>
+        <div class="summary-detail-score">61 / 100</div>
+      </div>
+      <div class="summary-detail">
+        <div class="summary-detail-title">Visual</div>
+        <div class="summary-detail-score">72 / 100</div>
+      </div>
+      <button>Continue</button>
+    </div>
+  </div>  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
