@@ -40,6 +40,7 @@ body {
   font-family: "Hanken Grotesk", sans-serif;
   font-size: var(--fs-s);
   background: hsl(var(--neutral-white-hsl), 0.1);
+  overflow: hidden;
 }
 
 .container {
@@ -196,6 +197,29 @@ body {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 605px) {
+  .container {
+    height: 100vh;
+    flex-direction: column;
+    margin-top: unset;
+  }
+
+  .result-container {
+    border-radius: 0 0 2rem 2rem;
+    gap: 1rem;
+  }
+
+  .summary-container {
+    padding: 2rem;
+  }
+
+  .attribution {
+    margin: 0;
+    padding: 0;
+  }
 }
