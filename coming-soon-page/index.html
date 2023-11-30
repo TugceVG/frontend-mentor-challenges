@@ -13,40 +13,38 @@
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
-    <main>
+    <header class="logo-container">
+      <img src="./images/logo.svg" alt="logo" />
+    </header>
+    <main class="container">
       <section class="content-container">
-        <div class="logo-container">
-          <img src="./images/logo.svg" alt="" />
-        </div>
-        <h1><span>We're </span>coming soon</h1>
+        <h1>
+          <span>We're </span>coming<br />
+          soon
+        </h1>
         <p>
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <form>
-          <div class="input-container">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email Address"
-              required
-            />
-            <label for="email">
-              <img src="./images/icon-error.svg" alt="" />
-            </label>
-            <button type="submit">
-              <img src="./images/icon-arrow.svg" alt="" />
-            </button>
-          </div>
+        <form action="#">
+          <label for="email">
+            <img src="./images/icon-error.svg" alt="" />
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+          <button type="submit">
+            <img src="./images/icon-arrow.svg" alt="" />
+          </button>
           <p class="error-msg">Please provide a valid email</p>
         </form>
       </section>
-      <section class="photo-container">
-        <img src="./images/hero-desktop.jpg" alt="" />
-        <!-- <img src="" alt="" /> -->
-      </section>
+      <section class="photo-container"></section>
     </main>
     <footer>
       <p class="attribution">
