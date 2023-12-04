@@ -18,10 +18,7 @@
     </header>
     <main class="container">
       <section class="content-container">
-        <h1>
-          <span>We're <br /></span>coming<br />
-          soon
-        </h1>
+        <h1><span>We're </span><br />coming<br />soon</h1>
         <p>
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our
@@ -36,12 +33,13 @@
             name="email"
             id="email"
             placeholder="Email Address"
+            onchange="signUp()"
             required
           />
           <button type="submit">
-            <img src="./images/icon-arrow.svg" alt="" />
+            <img src="./images/icon-arrow.svg" alt="submit" />
           </button>
-          <p class="error-msg">Please provide a valid email</p>
+          <p class="error-msg" id="error-msg">Please provide a valid email</p>
         </form>
       </section>
       <section class="photo-container"></section>
@@ -54,5 +52,6 @@
         >. Coded by <a href="#">Tugce Vatansever Gunduz</a>.
       </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
