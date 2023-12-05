@@ -26,17 +26,16 @@
         </p>
         <form action="#">
           <label for="email">
-            <img src="./images/icon-error.svg" alt="" />
+            <img src="./images/icon-error.svg" id="error-icon" alt="" />
           </label>
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Email Address"
-            onchange="signUp()"
             required
           />
-          <button type="submit">
+          <button type="submit" onclick="signUp()">
             <img src="./images/icon-arrow.svg" alt="submit" />
           </button>
           <p class="error-msg" id="error-msg">Please provide a valid email</p>
