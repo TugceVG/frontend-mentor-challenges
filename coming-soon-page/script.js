@@ -4,10 +4,10 @@ function signUp() {
   const errorIcon = document.querySelector("#error-icon");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!emailRegex.test(email)) {
-    showEror(errorMsg, errorIcon);
-  } else {
+  if (emailRegex.test(email)) {
     hideEror(errorMsg, errorIcon);
+  } else {
+    showEror(errorMsg, errorIcon);
   }
 }
 
