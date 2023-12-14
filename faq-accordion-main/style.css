@@ -49,7 +49,7 @@ main {
 
 .content-container {
   width: 40%;
-  height: 60%;
+  /* height: 60%; */
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -67,11 +67,39 @@ main {
   gap: 2rem;
 }
 
-.subtitle-title {
+#accordion {
+  /* margin: 100px auto; */
+  /* width: 600px; */
+}
+
+#accordion li {
+  list-style: none;
+  /* width: 100%;
+  margin-bottom: 10px; */
+}
+
+#accordion li label {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+}
+
+#accordion li label + input[type="radio"] {
+  display: none;
+}
+
+#accordion .content {
+  /* padding: 0 10px; */
+  /* line-height: 26px; */
+  max-height: 0;
+  overflow: hidden;
+  /* transition: max-height 0.3s; */
+}
+
+#accordion li label + input[type="radio"]:checked + .content {
+  max-height: 100%;
 }
 
 .attribution {
