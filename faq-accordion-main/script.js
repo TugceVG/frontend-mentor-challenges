@@ -1,6 +1,6 @@
-function accordionHandler(buttonElement) {
-  const pElement = document.querySelector(`#${buttonElement.id}-content`);
-  const spanElement = buttonElement.getElementsByTagName("span")[0];
+function accordionHandler(container) {
+  const pElement = document.querySelector(`#${container.id}-content`);
+  const spanElement = container.getElementsByTagName("span")[0];
   pElement.classList.toggle("open");
   spanElement.classList.toggle("open");
 }

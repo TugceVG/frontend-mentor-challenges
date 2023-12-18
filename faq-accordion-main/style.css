@@ -45,30 +45,63 @@ main {
 }
 
 .content-container {
-  width: 40%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 20%;
   left: 30%;
-  padding: 5rem 4rem;
+  padding: 5rem 4rem 2rem 4rem;
   border-radius: 2rem;
   background: hsl(var(--white));
-  gap: 2rem;
+  /* gap: 2.5rem; */
 }
 
 .header {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.content-container .title {
+.header h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: hsl(var(--dark-purple), 0.9);
+}
+
+.content-container .accordion-container {
+  border-bottom: 1px solid hsl(var(--grayish-purple), 0.1);
+}
+
+.content-container .accordion-container:last-child {
+  border-bottom: none;
+}
+
+.content-container .accordion-container .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-items: center;
   cursor: pointer;
+}
+
+.content-container .accordion-container .title h3 {
+  font-size: 1.8rem;
+  color: hsl(var(--dark-purple), 0.9);
+  margin-bottom: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.content-container .accordion-container .title h3:hover {
+  color: hsl(280, 60%, 48%);
+}
+
+.content-container .accordion-container p {
+  color: hsl(var(--grayish-purple), 0.8);
+  line-height: 2.3rem;
+  text-align: left;
+  width: 100%;
 }
 
 .content-container .title button {
@@ -95,6 +128,7 @@ main {
 
 .content-container p.open {
   height: 100%;
+  padding-bottom: 2.5rem;
 }
 
 .attribution {
