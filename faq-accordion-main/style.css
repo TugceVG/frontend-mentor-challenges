@@ -33,7 +33,7 @@ main {
 }
 
 .top-bg-container {
-  height: 52%;
+  height: 55%;
   background-image: url(./assets/images/background-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,27 +45,27 @@ main {
 }
 
 .content-container {
-  width: 30%;
+  width: 32%;
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 20%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -43%);
   padding: 5rem 4rem 2rem 4rem;
   border-radius: 2rem;
   background: hsl(var(--white));
-  /* gap: 2.5rem; */
 }
 
-.header {
+.content-container .header {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-bottom: 1.5rem;
 }
 
-.header h1 {
-  font-size: 6rem;
+.content-container .header h1 {
+  font-size: 5.5rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: hsl(var(--dark-purple), 0.9);
@@ -88,6 +88,7 @@ main {
 
 .content-container .accordion-container .title h3 {
   font-size: 1.8rem;
+  font-weight: 600;
   color: hsl(var(--dark-purple), 0.9);
   margin-bottom: 2.5rem;
   padding-top: 2.5rem;
@@ -139,4 +140,10 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 992px) {
+  .content-container {
+    width: 90%;
+  }
 }
