@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [My solution URL here](https://github.com/TugceVG/frontend-mentor-challenges/tree/main/coming-soon-page)
-- Live Site URL: [Add live site URL here](https://coming-soon-page-tugcevg.netlify.app/)
+- Live Site URL: [Live site URL here](https://coming-soon-page-tugcevg.netlify.app/)
 
 ## My process
 

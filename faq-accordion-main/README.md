@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [My solution URL here](https://github.com/TugceVG/frontend-mentor-challenges/tree/main/faq-accordion-main)
-- Live Site URL: [Live site URL here]()
+- Live Site URL: [Live site URL here](https://faq-accordion-tugcevg.netlify.app/)
 
 ## My process
 
